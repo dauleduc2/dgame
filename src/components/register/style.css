@@ -1,0 +1,81 @@
+.signUpContainer {
+  width: 100%;
+  height: calc(100vh - 64px);
+  position: relative;
+}
+
+.signUpContainer .signInWrapper {
+  padding: 10px;
+  width: 40%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signUpContainer .signInWrapper .userName,
+.signUpContainer .signInWrapper .password,
+.signUpContainer .signInWrapper .email {
+  width: 90%;
+}
+
+.signUpContainer .signInWrapper .userName .inputButton,
+.signUpContainer .signInWrapper .password .inputButton,
+.signUpContainer .signInWrapper .email .inputButton {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.signUpContainer .signInWrapper .signInButton {
+  margin-top: 30px;
+  width: 90%;
+}
+
+.signUpContainer .signInWrapper .signInAction {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.signUpContainer .signInWrapper .signInAction .link {
+  text-decoration: none;
+  color: #3f51b5;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.signUpContainer .signInWrapper .signInAction .link:hover {
+  text-decoration: underline;
+  color: #002984;
+}
+
+.signUpContainer .signInWrapper .signInAction .haveAnAccount {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.782);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-weight: 600;
+}
+/*# sourceMappingURL=style.css.map */

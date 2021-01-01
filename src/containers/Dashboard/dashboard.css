@@ -1,0 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.hidesideBar {
+  transform: translateX(100%);
+  transition: ease-out 1s;
+}

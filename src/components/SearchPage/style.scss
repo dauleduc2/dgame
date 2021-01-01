@@ -1,0 +1,45 @@
+$primary: #3f51b5;
+$primaryLight: #757de8;
+$primaryDark: #002984;
+$primaryText: #ffffff;
+
+$secondary: #455a64;
+$secondaryLight: #718792;
+$secondaryDark: #1c313a;
+$secondaryText: #ffffff;
+$disabled: rgba(0, 0, 0, 0.26);
+$disabledBackground: rgba(0, 0, 0, 0.12);
+
+$success: #4caf50;
+$successWithOpacity: #4caf4fde;
+$successLight: #81c784;
+$successLightWithOpacity: #81c784e0;
+
+$blue: #2196f3;
+$blueLight: #64b5f6;
+$blueDark: #1976d2;
+
+$red: #f50057;
+$redLight: #f73378;
+$redDark: #ab003c;
+.searchPageCategoryContainer {
+  width: 100%;
+  height: calc(100vh - 64px);
+  padding: 10px;
+  overflow: scroll;
+  .searchPageResult {
+    font-size: 25px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  .category {
+    .categoryListSection {
+      width: 100%;
+      height: 100%;
+      .categoryList {
+        display: flex !important;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

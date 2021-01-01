@@ -1,0 +1,26 @@
+.searchPageCategoryContainer {
+  width: 100%;
+  height: calc(100vh - 64px);
+  padding: 10px;
+  overflow: scroll;
+}
+
+.searchPageCategoryContainer .searchPageResult {
+  font-size: 25px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.searchPageCategoryContainer .category .categoryListSection {
+  width: 100%;
+  height: 100%;
+}
+
+.searchPageCategoryContainer .category .categoryListSection .categoryList {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=style.css.map */

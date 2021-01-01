@@ -1,0 +1,31 @@
+$xs: 0px;
+$sm: 600px;
+$md: 960px;
+$lg: 1280px;
+$xl: 1920px;
+
+@media (max-width: $md) {
+  .blackWrapper {
+    width: 100%;
+    height: calc(100vh - 64px);
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.156);
+    position: fixed;
+    left: 0;
+  }
+  .drawer {
+    position: fixed;
+    right: 0;
+    width: 240px;
+    height: 100vh !important;
+  }
+  .deep {
+    z-index: -1 !important;
+  }
+  .MuiPaper-root.MuiDrawer-paper.SideBar-drawerPaper-20.MuiDrawer-paperAnchorRight.MuiDrawer-paperAnchorDockedRight.MuiPaper-elevation0 {
+    height: 100vh;
+  }
+}
+.MuiButton-containedSecondary {
+  font-size: 14px;
+}

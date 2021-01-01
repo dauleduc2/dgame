@@ -1,0 +1,20 @@
+.rotate180 {
+  transform: rotate(180deg);
+}
+.arrowIcon {
+  transition: all 0.3s !important;
+}
+.amountProductInCart {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  position: relative;
+}
+.amountAnnoucement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}

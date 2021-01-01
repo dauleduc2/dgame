@@ -1,0 +1,386 @@
+$primary: #3f51b5;
+$primaryLight: #757de8;
+$primaryDark: #002984;
+$primaryText: #ffffff;
+
+$secondary: #455a64;
+$secondaryLight: #718792;
+$secondaryDark: #1c313a;
+$secondaryText: #ffffff;
+$disabled: rgba(0, 0, 0, 0.26);
+$disabledBackground: rgba(0, 0, 0, 0.12);
+
+$success: #4caf50;
+$successWithOpacity: #4caf4fde;
+$successLight: #81c784;
+$successLightWithOpacity: #81c784e0;
+
+$blue: #2196f3;
+$blueLight: #64b5f6;
+$blueDark: #1976d2;
+
+$red: #f50057;
+$redLight: #f73378;
+$redDark: #ab003c;
+
+$red: #f50057;
+$redLight: #f73378;
+$redDark: #ab003c;
+$xs: 0px;
+$mobile: 500px;
+$sm: 600px;
+$md: 960px;
+$lg: 1280px;
+$xl: 1920px;
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.homePageContainer {
+  width: 100%;
+  height: calc(100vh - 64px - 20px);
+  overflow-y: scroll;
+  padding-top: 10px;
+  position: relative;
+
+  background: #fc00ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #00dbde,
+    #fc00ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #00dbde,
+    #fc00ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  .slideContainer {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: 3px;
+    .slide {
+      width: 100%;
+      height: 350px;
+      .slideSection {
+        width: 90%;
+        height: 350px;
+        display: flex;
+        position: absolute;
+        margin-left: 5%;
+        transition: all 1s;
+        opacity: 0;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.22);
+        .imageSection {
+          width: 855px;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0 auto;
+          }
+          .saleBadge {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 3;
+            color: $primaryText;
+            background-color: $successLightWithOpacity;
+            padding: 10px 20px;
+            border-top-right-radius: 6px;
+          }
+        }
+        .slideDetail {
+          width: 480px;
+          padding: 10px;
+          background-color: #64b5f6;
+          position: relative;
+          background-color: #ffffff33;
+          .categoryItem {
+            display: flex;
+            .typeSection {
+              margin-left: 4px;
+            }
+          }
+          .titleItem {
+            font-weight: 700;
+          }
+          .headerDetail {
+            font-weight: bold;
+            &:after {
+              content: " :";
+            }
+          }
+          .categoryBadge {
+            margin: 3px;
+            cursor: pointer;
+          }
+          .detailItem {
+            color: #000000;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+          .priceItem {
+            display: flex;
+            position: absolute;
+            right: 2%;
+            bottom: 18%;
+            .newPriceIcon {
+              font-size: 60px;
+            }
+
+            .originalPrice {
+              text-decoration: line-through;
+              color: $disabled;
+              padding: auto;
+              padding: 5px;
+              font-size: 20px;
+              margin-top: 10px;
+            }
+            .salePrice {
+              margin-left: 10px;
+              font-size: 35px;
+            }
+          }
+          .detailAction {
+            position: absolute;
+            bottom: 7%;
+            right: 2%;
+            display: flex;
+
+            .addToCartButton {
+            }
+            .navlinkSlide {
+              text-decoration: none;
+              .seeMoreButton {
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+      .appear {
+        opacity: 1;
+      }
+    }
+    .slideDot {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      .dot {
+        cursor: pointer;
+        height: 18px;
+        width: 18px;
+        margin: 0 2px;
+        background-color: $secondary;
+        border-radius: 50%;
+        display: flex;
+        &:hover {
+          background-color: $primary;
+        }
+        &:active {
+          background-color: $primaryLight;
+        }
+      }
+      .active {
+        background-color: $primaryLight;
+      }
+    }
+    .arrow {
+      font-size: 50px;
+      font-weight: 700;
+      cursor: pointer;
+      position: absolute;
+      color: white;
+      &:hover {
+        color: rgba(255, 255, 255, 0.9);
+      }
+      &:active {
+        color: $secondaryLight;
+      }
+    }
+    .arrowLeft {
+      left: 0%;
+      top: 40%;
+    }
+    .arrowRight {
+      right: 0%;
+      top: 40%;
+    }
+  }
+  .categoryContainer {
+    width: 100%;
+    height: 100vh;
+    margin-top: 65px;
+    .category {
+      .categoryListSection {
+        width: 100%;
+        height: 100%;
+        .categoryList {
+          display: flex !important;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.titleWrapper {
+  margin-top: 30px;
+  color: black;
+  padding: 10px 5px 10px 0px;
+  font-size: 20px;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  .categoryNavlink {
+    text-decoration: none;
+    margin-right: 10px;
+    a {
+      color: white;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .title {
+    margin-left: 10px;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+    position: relative;
+    font-family: "Hammersmith One", sans-serif;
+    &:before {
+      content: "";
+      width: calc(100%);
+      height: 2px;
+      background-color: $primaryText;
+      // position: absolute;
+      bottom: 0px;
+      left: 0px;
+      transform: translateX(-110%);
+      transition: 1s all ease-in-out;
+    }
+    &:hover::before {
+      transform: translateX(110%);
+    }
+  }
+}
+
+.basicHeader {
+  margin-bottom: 30px !important;
+  margin-top: 30px !important;
+}
+
+@media (max-width: $md) {
+  .slideSection {
+    margin-left: unset !important;
+    width: 100% !important;
+  }
+  .arrow {
+    display: none !important;
+  }
+  .squareAnimate {
+    font-size: 25px !important;
+  }
+  .slideDetail {
+    h5.MuiTypography-root.titleItem.MuiTypography-h5.MuiTypography-gutterBottom {
+      font-size: 22px !important;
+    }
+    .headerDetail {
+      font-size: 16px !important;
+    }
+    p.MuiTypography-root.detailItem.MuiTypography-body2.MuiTypography-gutterBottom {
+      font-size: 16px !important;
+    }
+  }
+  .detailAction {
+    span.MuiButton-label {
+      font-size: 12px !important;
+    }
+  }
+}
+@media (max-width: 700px) {
+  // .navlink {
+  //   height: 193px !important;
+  // }
+  .slideDetail {
+    display: none;
+  }
+  .homePageContainer .slideContainer .slide .slideSection {
+    height: 300px !important;
+  }
+  .slide {
+    height: 300px !important;
+  }
+  .detailProduct {
+    h5.MuiTypography-root.titleItem.MuiTypography-h5.MuiTypography-gutterBottom {
+      font-size: 16px !important;
+    }
+  }
+}
+@media (max-width: $sm) {
+  .slide {
+    height: 200px !important;
+  }
+  .homePageContainer .slideContainer .slide .slideSection {
+    height: 200px !important;
+  }
+  .saleBadge {
+    font-size: 12px !important;
+    padding: 10px 12px !important;
+  }
+  .titleWrapper .title,
+  .titleWrapper .categoryNavlink a {
+    font-size: 18px;
+  }
+  .titleWrapper {
+    padding: 5px 5px 5px 0;
+  }
+}
+@media (min-width: 1500px) {
+  .homePageContainer .slideContainer .slide .slideSection {
+    width: auto;
+  }
+  .slide {
+    display: flex;
+    justify-content: center;
+  }
+  .slideSection {
+    margin-left: unset !important;
+  }
+}

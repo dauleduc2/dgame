@@ -1,0 +1,441 @@
+$primary: #3f51b5;
+$primaryLight: #757de8;
+$primaryDark: #002984;
+$primaryText: #ffffff;
+
+$secondary: #455a64;
+$secondaryLight: #718792;
+$secondaryDark: #1c313a;
+$secondaryText: #ffffff;
+$disabled: rgba(0, 0, 0, 0.26);
+$disabledBackground: rgba(0, 0, 0, 0.12);
+
+$success: #4caf50;
+$successWithOpacity: #4caf4fde;
+$successLight: #81c784;
+$successLightWithOpacity: #81c784e0;
+
+$blue: #2196f3;
+$blueLight: #64b5f6;
+$blueDark: #1976d2;
+
+$red: #f50057;
+$redLight: #f73378;
+$redDark: #ab003c;
+
+$xs: 0px;
+$mobile: 500px;
+$sm: 600px;
+$md: 960px;
+$lg: 1280px;
+$xl: 1920px;
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.cartContainer {
+  width: 100%;
+  height: calc(100vh - 60px - 5px);
+  overflow-y: scroll;
+  // background-color: yellow;
+  //   bill section
+  .billSection {
+    width: 100%;
+    height: auto;
+    position: relative;
+    .signInNofication {
+      width: 480px;
+      height: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .message {
+        font-size: 47px;
+        font-family: "Poppins", sans-serif;
+      }
+      .signInNoficationAction {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        .navLink {
+          text-decoration: none;
+          .button {
+            font-size: 20px;
+            width: 250px;
+          }
+        }
+      }
+    }
+    .productInCart {
+      display: flex;
+      .productInCartWrapper {
+        width: 80%;
+        height: 100px;
+        margin: 30px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        display: flex;
+        position: relative;
+        img {
+          width: 200px;
+          height: 100%;
+        }
+        .productInformationWrapper {
+          display: flex;
+          flex-direction: column;
+          margin-left: 20px;
+          .productName {
+            font-size: 25px;
+            font-weight: bold;
+          }
+          .priceWrapper {
+            display: flex;
+            height: 24px;
+            .oldPrice {
+              text-decoration: line-through;
+              color: $disabled;
+              font-size: 15px;
+            }
+            .changeIcon {
+              font-size: 32px;
+              margin: 10px;
+              margin-top: -5px;
+            }
+            .newPrice {
+              font-size: 20px;
+            }
+          }
+          .amountArea {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+            .amountWrapper {
+              width: 100%;
+              height: 30px;
+              display: flex;
+              .add,
+              .minus {
+                padding: 0px 3px !important;
+                min-width: 0px !important;
+                border-radius: 0px !important;
+              }
+              .add {
+                border-top-right-radius: 5px !important;
+                border-bottom-right-radius: 5px !important;
+                .addIcon {
+                  font-size: 20px;
+                }
+              }
+              .minus {
+                border-top-left-radius: 5px !important;
+                border-bottom-left-radius: 5px !important;
+                .removeIcon {
+                  font-size: 20px;
+                }
+              }
+              .amount {
+                font-size: 20px;
+                padding: 2px 10px;
+                background-color: #ffffffb6;
+                // border-top: 1px rgba(0, 0, 0, 0.313) solid;
+                // border-bottom: 1px $disabled solid;
+              }
+            }
+          }
+        }
+
+        .totalPriceWrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          width: 100px;
+          position: absolute;
+          right: 10px;
+          bottom: 15px;
+          .calcPrice {
+            display: flex;
+            justify-content: space-between;
+            margin: 2px;
+            span {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      .deleteWrapper {
+        margin-top: 30px;
+        height: 100px;
+        text-align: center;
+        .iconButton {
+          width: 100% !important;
+          height: 100% !important;
+          border-radius: 0px !important;
+          .icon {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .mobileProductInCart {
+      padding: 10px;
+      display: flex;
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 20px;
+      margin-bottom: 50px;
+      position: relative;
+      img {
+        width: 130px;
+        height: 80px;
+      }
+      .mobileProductInCartDetail {
+        margin-left: 20px;
+        align-self: center;
+        .mobileTitle {
+          font-size: 19px;
+          font-weight: 500;
+        }
+        .priceWrapper {
+          display: flex;
+          .oldPrice {
+            text-decoration: line-through;
+            color: $disabled;
+            font-size: 15px;
+            align-self: center;
+          }
+          .changeIcon {
+            font-size: 32px;
+            margin: 0 5px;
+            // margin-top: -3px;
+          }
+          .newPrice {
+            font-size: 20px;
+            align-self: center;
+          }
+        }
+        .amountArea {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 10px;
+          .amountWrapper {
+            width: 100%;
+            height: 30px;
+            display: flex;
+            .add,
+            .minus {
+              padding: 0px 3px !important;
+              min-width: 0px !important;
+              border-radius: 0px !important;
+            }
+            .add {
+              border-top-right-radius: 5px !important;
+              border-bottom-right-radius: 5px !important;
+              .addIcon {
+                font-size: 20px;
+              }
+            }
+            .minus {
+              border-top-left-radius: 5px !important;
+              border-bottom-left-radius: 5px !important;
+              .removeIcon {
+                font-size: 20px;
+              }
+            }
+            .amount {
+              font-size: 20px;
+              padding: 2px 10px;
+              background-color: #ffffffb6;
+            }
+          }
+        }
+      }
+      .totalPriceWrapper {
+        width: auto;
+        position: absolute;
+        right: 0px;
+        bottom: -25px;
+        .calcPrice {
+          font-size: 17px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  // total section
+  .totalSection {
+    width: 100%;
+    height: auto;
+    .totalWrapper {
+      padding: 10px;
+      margin-top: 70px;
+      width: 90%;
+      margin-right: 5%;
+      height: auto;
+      padding-bottom: 30px;
+      position: sticky;
+      top: 50px;
+      .billHeader {
+        color: $primary;
+        font-family: "Do Hyeon", sans-serif;
+        font-size: 35px;
+        text-align: center;
+      }
+      .amountProductAnnouncement {
+        font-weight: bold;
+        margin-top: 40px;
+        span {
+        }
+      }
+      .price {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px 0;
+        span {
+          font-weight: bold;
+        }
+      }
+      .placeOrderButton {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) and (min-width: $sm) {
+  .cartContainer .billSection .productInCart .productInCartWrapper img {
+    width: 25%;
+  }
+  .cartContainer .billSection .productInCart .productInCartWrapper {
+    height: 80px;
+  }
+  .MuiPaper-root.productInCartWrapper.MuiPaper-elevation1.MuiPaper-rounded {
+    margin: 0px;
+  }
+  .productInCart {
+    height: 115px !important;
+    margin-top: 30px !important;
+  }
+  .priceWrapper {
+    margin-top: 20px !important;
+  }
+  .oldPrice {
+    font-size: 18px !important;
+  }
+  .newPrice {
+    font-size: 24px !important;
+    line-height: 20px !important;
+  }
+  .productName {
+    font-size: 25px !important;
+  }
+  .deleteWrapper {
+    margin-top: unset !important;
+    height: 100px !important;
+  }
+  .amount {
+    padding: 1px 7px !important;
+  }
+  .amountArea {
+    position: absolute;
+    bottom: -28px;
+    right: 10px;
+  }
+  .amountWrapper {
+    height: 23px !important;
+    width: 75px;
+  }
+  button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.minus.MuiButton-containedPrimary {
+    border: unset !important;
+  }
+  button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.add.MuiButton-containedPrimary {
+    border: unset !important;
+  }
+  .cartContainer
+    .billSection
+    .productInCart
+    .productInCartWrapper
+    .productInformationWrapper
+    .amountArea
+    .amountWrapper {
+    width: 76px !important;
+  }
+  .amountArea {
+    justify-content: unset !important;
+    width: 76px !important;
+  }
+  .cartContainer .totalSection .totalWrapper {
+    width: 90% !important;
+    margin-left: 5% !important;
+    position: relative !important;
+    top: unset !important;
+  }
+  .cartContainer .billSection {
+    height: auto !important;
+    padding: 10px !important;
+  }
+  .cartContainer .billSection .productInCart .productInCartWrapper {
+    width: 100%;
+    height: 100px !important;
+  }
+  .cartContainer .billSection .signInNofication {
+    position: relative !important;
+    top: unset !important;
+    transform: translateX(-50%) !important;
+    left: 50% !important;
+    margin-top: 30px;
+  }
+  .signInNofication {
+    .message {
+      font-size: 40px !important;
+    }
+  }
+  .cartContainer
+    .billSection
+    .signInNofication
+    .signInNoficationAction
+    .navLink
+    .button {
+    font-size: 15px !important;
+    width: 178px;
+  }
+  .cartContainer .billSection .signInNofication {
+    width: 403px !important;
+  }
+}
+
+@media (max-width: $sm) {
+  .signInNofication {
+    width: 100% !important;
+    position: relative !important;
+    .message {
+      font-size: 28px !important;
+    }
+  }
+  .cartContainer
+    .billSection
+    .signInNofication
+    .signInNoficationAction
+    .navLink
+    .button {
+    font-size: 14px !important;
+    width: 138px;
+  }
+  .cartContainer .billSection .signInNofication {
+    width: 298px !important;
+  }
+  .cartContainer .totalSection .totalWrapper {
+    width: 90% !important;
+    margin-left: 5% !important;
+    position: relative !important;
+    top: unset !important;
+  }
+  .billHeader {
+    font-size: 30px !important;
+  }
+}
+
+@media (min-width: $md) and (max-width: 1250px) {
+  .cartContainer .billSection .productInCart .productInCartWrapper img {
+    width: 150px !important;
+  }
+} ;
