@@ -42,13 +42,13 @@ class App extends Component {
   };
   render() {
     let { ui } = this.props;
-    let { globalLoadingOpenning } = ui;
+    // let { globalLoadingOpenning } = ui;
     return (
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <div className="App">
             <Dashboard>{this.renderContent()}</Dashboard>
-            {globalLoadingOpenning ? <GlobalLoading /> : ""}
+            {/* {globalLoadingOpenning ? <GlobalLoading /> : ""} */}
             <ConfirmNofication />
             <LoginNofication />
           </div>
@@ -63,8 +63,5 @@ const mapStateToProps = (state) => {
     productList: state.productList.productList,
     ui: state.ui,
   };
-};
-const mapDispatchToProps = (dispatch) => {
-  return {};
 };
 export default connect(mapStateToProps, mapDispatchToProps)(App);

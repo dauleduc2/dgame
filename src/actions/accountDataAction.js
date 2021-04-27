@@ -46,6 +46,8 @@ export const signInSuccess = (userId, serverId) => {
     },
   };
 };
+
+
 export const signInFailed = () => {
   return {
     type: types.SIGNIN_FAILED,

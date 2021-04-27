@@ -31,7 +31,7 @@ export const addAmountOfProductSuccess = (data) => {
     payload: data,
   };
 };
-export const addAmountOfProductFailed = (error) => {
+export const addAmountOfProductFailed = () => {
   return {
     type: types.ADD_AMOUNT_OF_PRODUCT_FAILED,
   };
